@@ -1157,6 +1157,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1437013298517378887, guid: 3876a7468deff7141b43cf8af3496660, type: 3}
   m_PrefabInstance: {fileID: 444626231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &457616436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457616438}
+  - component: {fileID: 457616437}
+  m_Layer: 0
+  m_Name: EnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &457616437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457616436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84eca363540be6b449088ebf912b25ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &457616438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457616436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.235196, y: -7.6804504, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &479317467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3486493818792831288, guid: e35c68432e4e923439904fcb66c4f4fc, type: 3}
@@ -1791,7 +1835,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1966614035, guid: 36f4876007b2bd64494b2a177ac189bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1901,7 +1945,6 @@ MonoBehaviour:
   xpGainMultiplier: 1
   coinGainMultiplier: 1
   baseDefense: 0
-  defenseMultiplier: 1
   baseLuck: 0
   luckMultiplier: 1
 --- !u!114 &674018236
@@ -30273,3 +30316,4 @@ SceneRoots:
   - {fileID: 1973974258}
   - {fileID: 1458261835}
   - {fileID: 1867102455}
+  - {fileID: 457616438}

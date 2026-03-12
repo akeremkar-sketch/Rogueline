@@ -13,7 +13,10 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] private GameObject xpOrbPrefab;
     [SerializeField] private int coinDropAmount = 3;
-    [SerializeField] private int xpDropValue = 30;  // Toplam XP değeri (eskiden 10 adet ayrı orb = 100 XP'di)
+    [SerializeField] private int xpDropValue = 30;
+
+    [Header("UI")]
+    [SerializeField] private EnemyHealthBar healthBar;
 
     protected float currentHealth;
     protected float attackTimer = 0f;
@@ -27,9 +30,11 @@ public class EnemyBase : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
 
-        // EnemyManager'a kayıt ol — WeaponBase bu listeyi kullanır (performans)
         if (EnemyManager.Instance != null)
             EnemyManager.Instance.Register(this);
+
+        if (healthBar != null)
+            healthBar.UpdateHealthBar(currentHealth, maxHealth);
     }
 
     protected virtual void Update()
@@ -39,9 +44,7 @@ public class EnemyBase : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance > attackRange)
-        {
             MoveTowardsPlayer();
-        }
         else
         {
             if (animator != null)
@@ -78,9 +81,13 @@ public class EnemyBase : MonoBehaviour
         if (isDead) return;
 
         currentHealth -= incomingDamage;
+        currentHealth = Mathf.Max(currentHealth, 0f);
 
         if (animator != null)
             animator.SetBool("IsHit", true);
+
+        if (healthBar != null)
+            healthBar.UpdateHealthBar(currentHealth, maxHealth);
 
         if (currentHealth <= 0f)
             Die();
@@ -91,14 +98,12 @@ public class EnemyBase : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        // EnemyManager listesinden çıkar
         if (EnemyManager.Instance != null)
             EnemyManager.Instance.Unregister(this);
 
         if (animator != null)
             animator.SetBool("IsDead", true);
 
-        // Coin dropu: hâlâ birden fazla coin düşer (mantıklı)
         if (coinPrefab != null)
         {
             for (int i = 0; i < coinDropAmount; i++)
@@ -108,8 +113,6 @@ public class EnemyBase : MonoBehaviour
             }
         }
 
-        // BUG FIX: Eski kod 10 ayrı XP orb spawn ediyordu (performans sorunu).
-        // Şimdi tek 1 orb spawn edilir, değeri dinamik olarak set edilir.
         if (xpOrbPrefab != null)
         {
             GameObject orb = Instantiate(xpOrbPrefab, transform.position, Quaternion.identity);

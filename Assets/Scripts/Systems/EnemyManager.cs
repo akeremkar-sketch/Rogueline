@@ -1,15 +1,11 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
-/// <summary>
-/// Sahnedeki aktif düşmanları takip eder.
-/// WeaponBase her frame FindGameObjectsWithTag çağırmak yerine bu listeyi kullanır.
-/// </summary>
 public class EnemyManager : MonoBehaviour
 {
     public static EnemyManager Instance { get; private set; }
 
-    private readonly List<EnemyBase> activeEnemies = new List<EnemyBase>();
+    private List<EnemyBase> activeEnemies = new List<EnemyBase>();
 
     private void Awake()
     {
@@ -28,5 +24,27 @@ public class EnemyManager : MonoBehaviour
         activeEnemies.Remove(enemy);
     }
 
-    public List<EnemyBase> GetActiveEnemies() => activeEnemies;
+    public List<EnemyBase> GetActiveEnemies()
+    {
+        return activeEnemies;
+    }
+
+    public EnemyBase GetClosestEnemy(Vector2 position, float range)
+    {
+        EnemyBase closest = null;
+        float closestDistance = range;
+
+        foreach (EnemyBase enemy in activeEnemies)
+        {
+            if (enemy == null) continue;
+            float distance = Vector2.Distance(position, enemy.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closest = enemy;
+            }
+        }
+
+        return closest;
+    }
 }
