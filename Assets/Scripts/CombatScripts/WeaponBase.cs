@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class WeaponBase : MonoBehaviour
@@ -25,19 +26,26 @@ public abstract class WeaponBase : MonoBehaviour
 
     protected void FindTarget()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        // EnemyManager üzerinden cachelenen listeyi kullan — her frame FindGameObjectsWithTag YOK
+        if (EnemyManager.Instance == null) return;
+
+        List<EnemyBase> enemies = EnemyManager.Instance.GetActiveEnemies();
         float closestDistance = Mathf.Infinity;
         currentTarget = null;
 
-        foreach (GameObject enemy in enemies)
+        Vector2 facingDir = GetFacingDirection();
+        float range = GetRange();
+
+        foreach (EnemyBase enemy in enemies)
         {
+            if (enemy == null) continue;
+
             float distance = Vector2.Distance(transform.position, enemy.transform.position);
 
-            if (distance <= GetRange() && distance < closestDistance)
+            if (distance <= range && distance < closestDistance)
             {
                 // Açı kontrolü
                 Vector2 dirToEnemy = (enemy.transform.position - transform.position).normalized;
-                Vector2 facingDir = GetFacingDirection();
                 float angle = Vector2.Angle(facingDir, dirToEnemy);
 
                 if (angle <= attackAngle / 2f)
@@ -51,17 +59,11 @@ public abstract class WeaponBase : MonoBehaviour
 
     private Vector2 GetFacingDirection()
     {
-        // PlayerController'dan son hareket yönünü al
-        Animator animator = GetComponentInParent<Animator>();
-        if (animator == null) return Vector2.down;
+        // PlayerController.Instance üzerinden doğrudan al — Animator parametresine bağımlılık YOK
+        if (PlayerController.Instance != null)
+            return PlayerController.Instance.FacingDirection;
 
-        float moveX = animator.GetFloat("MoveX");
-        float moveY = animator.GetFloat("MoveY");
-
-        if (moveX != 0 || moveY != 0)
-            return new Vector2(moveX, moveY).normalized;
-
-        return Vector2.down; // varsayılan aşağı
+        return Vector2.down;
     }
 
     protected float GetDamage() => baseDamage * PlayerStats.Instance.Damage;

@@ -27,8 +27,10 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float coinGainMultiplier = 1f;
 
     [Header("Defense")]
+    // BUG FIX: Eski sistemde baseDefense=0 * defenseMultiplier=1 = hep 0 oluyordu.
+    // Şimdi flat (toplama) sistem: Defense = baseDefense + defenseBonus
     [SerializeField] private float baseDefense = 0f;
-    [SerializeField] private float defenseMultiplier = 1f;
+    private float defenseBonus = 0f;
 
     [Header("Luck")]
     [SerializeField] private float baseLuck = 0f;
@@ -42,7 +44,10 @@ public class PlayerStats : MonoBehaviour
     public float PickupRadius => basePickupRadius * pickupRadiusMultiplier;
     public float XPGain => xpGainMultiplier;
     public float CoinGain => coinGainMultiplier;
-    public float Defense => baseDefense * defenseMultiplier;
+
+    // BUG FIX: Flat toplama — base=0 olsa bile bonus çalışır
+    public float Defense => baseDefense + defenseBonus;
+
     public float Luck => baseLuck * luckMultiplier;
 
     private void Awake()
@@ -59,7 +64,10 @@ public class PlayerStats : MonoBehaviour
     public void AddPickupRadiusBonus(float percent) => pickupRadiusMultiplier += percent;
     public void AddXPGainBonus(float percent) => xpGainMultiplier += percent;
     public void AddCoinGainBonus(float percent) => coinGainMultiplier += percent;
-    public void AddDefenseBonus(float percent) => defenseMultiplier += percent;
+
+    // BUG FIX: Flat zırh bonusu — artık gerçekten çalışıyor
+    public void AddDefenseBonus(float amount) => defenseBonus += amount;
+
     public void AddLuckBonus(float percent) => luckMultiplier += percent;
 
     // Run bitince sıfırla
@@ -72,7 +80,7 @@ public class PlayerStats : MonoBehaviour
         pickupRadiusMultiplier = 1f;
         xpGainMultiplier = 1f;
         coinGainMultiplier = 1f;
-        defenseMultiplier = 1f;
+        defenseBonus = 0f;      // BUG FIX: defenseMultiplier yerine defenseBonus sıfırlanıyor
         luckMultiplier = 1f;
     }
 }

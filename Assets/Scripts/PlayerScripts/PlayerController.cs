@@ -2,12 +2,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance { get; private set; }
+
     [Header("Animation Settings")]
     [SerializeField] private float baseAnimSpeed = 1f;
+
+    // Silahların yön bilgisini alması için
+    public Vector2 FacingDirection { get; private set; } = Vector2.down;
 
     private Rigidbody2D rb;
     private Animator animator;
     private Vector2 moveInput;
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
 
     private void Start()
     {
@@ -33,11 +44,13 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetFloat("MoveX", 0f);
                 animator.SetFloat("MoveY", y > 0 ? 1f : -1f);
+                FacingDirection = new Vector2(0f, y > 0 ? 1f : -1f);
             }
             else
             {
                 animator.SetFloat("MoveX", x > 0 ? 1f : -1f);
                 animator.SetFloat("MoveY", 0f);
+                FacingDirection = new Vector2(x > 0 ? 1f : -1f, 0f);
             }
         }
     }
