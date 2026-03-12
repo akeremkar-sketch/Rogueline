@@ -6,7 +6,6 @@ public abstract class WeaponBase : MonoBehaviour
     [SerializeField] protected float baseDamage = 10f;
     [SerializeField] protected float baseAttackSpeed = 1f;
     [SerializeField] protected float baseRange = 2f;
-    [SerializeField] protected float attackAngle = 120f;
 
     protected float attackTimer = 0f;
     protected Transform currentTarget;
@@ -25,32 +24,9 @@ public abstract class WeaponBase : MonoBehaviour
 
     protected void FindTarget()
     {
+        // Vampire Survivors tarzı: en yakın düşmana her zaman saldır, yön fark etmez
         EnemyBase closest = EnemyManager.Instance.GetClosestEnemy(transform.position, GetRange());
-
-        if (closest == null)
-        {
-            currentTarget = null;
-            return;
-        }
-
-        // Açı kontrolü
-        Vector2 dirToEnemy = (closest.transform.position - transform.position).normalized;
-        Vector2 facingDir = GetFacingDirection();
-        float angle = Vector2.Angle(facingDir, dirToEnemy);
-
-        if (angle <= attackAngle / 2f)
-            currentTarget = closest.transform;
-        else
-            currentTarget = null;
-    }
-
-    private Vector2 GetFacingDirection()
-    {
-        // PlayerController.Instance üzerinden al — Animator parametresine bağımlılık YOK
-        if (PlayerController.Instance != null)
-            return PlayerController.Instance.FacingDirection;
-
-        return Vector2.down;
+        currentTarget = closest != null ? closest.transform : null;
     }
 
     protected float GetDamage() => baseDamage * PlayerStats.Instance.Damage;
