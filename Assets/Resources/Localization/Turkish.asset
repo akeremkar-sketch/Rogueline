@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2ec8f321b63414782f6781ca6e3746, type: 3}
+  m_Name: Turkish
+  m_EditorClassIdentifier: 
+  languageName: "T\xFCrk\xE7e"
+  font: {fileID: 0}
+  fontSizeMultiplier: 1
+  entries:
+  - key: status_ready
+    value: HAZIR
+  - key: status_active
+    value: "AKT\u0130F {0}s"
+  - key: status_no_blood
+    value: KAN YOK
+  - key: status_dodge
+    value: "KA\xC7INDI!"
+  - key: status_slowed
+    value: "YAVA\u015ELADI!"
+  - key: ability_charge_rush
+    value: "H\xFCcum Ko\u015Fusu"
+  - key: ability_dash
+    value: "At\u0131l\u0131\u015F"
+  - key: ability_blink
+    value: "\u0130\u015F\u0131nlanma"
+  - key: ability_bat_form
+    value: Yarasa Formu
+  - key: stat_move_speed
+    value: "Hareket H\u0131z\u0131"
+  - key: stat_max_health
+    value: Maksimum Can
+  - key: stat_damage
+    value: Hasar
+  - key: stat_attack_speed
+    value: "Sald\u0131r\u0131 H\u0131z\u0131"
+  - key: stat_attack_count
+    value: "Sald\u0131r\u0131 Say\u0131s\u0131"
+  - key: stat_pickup_radius
+    value: Toplama Menzili
+  - key: stat_xp_gain
+    value: "XP Kazan\u0131m\u0131"
+  - key: stat_coin_gain
+    value: "Alt\u0131n Kazan\u0131m\u0131"
+  - key: stat_defense
+    value: Savunma
+  - key: stat_luck
+    value: "\u015Eans"
+  - key: stat_life_steal
+    value: "Can \xC7alma"
+  - key: stat_life_regen
+    value: Can Yenileme
+  - key: stat_dodge
+    value: "Ka\xE7\u0131nma"
+  - key: stat_knockback
+    value: "Geri \u0130tme"
+  - key: stat_crit_chance
+    value: "Kritik \u015Eans"
+  - key: stat_difficulty
+    value: Zorluk
+  - key: take
+    value: Al
+  - key: no_space
+    value: Yer Yok
+  - key: press_e
+    value: '[E]''ye Bas'
+  - key: shop_prompt
+    value: '[E] Market'
+  - key: shop_sell
+    value: "Sat: {0} alt\u0131n"
+  - key: shop_price
+    value: "{0} alt\u0131n"
+  - key: shop_inventory_full
+    value: Envanter Dolu!
+  - key: shop_not_enough_coins
+    value: "Yeterli Alt\u0131n Yok!"
+  - key: shop_bought
+    value: "{0} Al\u0131nd\u0131!"
+  - key: tooltip_sell
+    value: 'Sat: {0}'
+  - key: hud_level
+    value: Sv. {0}
+  - key: hud_xp_max
+    value: Max
+  - key: wave_active
+    value: DALGA {0}
+  - key: wave_next
+    value: 'Sonraki Dalga: {0}s'
+  - key: upgrade_level_up
+    value: "SEV\u0130YE {0}!"
+  - key: abilitybar_keybind
+    value: '[SPACE]  {0}'
+  - key: death_score
+    value: 'PUAN: {0}'
+  - key: death_distance
+    value: 'Mesafe:        {0}m  (+{1})'
+  - key: death_kills
+    value: "\xD6ld\xFCrme:       {0}  (+{1})"
+  - key: death_damage_dealt
+    value: 'Verilen Hasar: {0}  (+{1})'
+  - key: death_level
+    value: 'Seviye:        {0}  (+{1})'
+  - key: death_coins
+    value: "Alt\u0131n:         {0}  (+{1})"
+  - key: death_damage_taken
+    value: "Al\u0131nan Hasar:  {0}  (-{1})"
+  - key: statspanel_damage
+    value: "Hasar           {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_speed
+    value: "Sald\u0131r\u0131 H\u0131z\u0131    {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_count
+    value: "Sald\u0131r\u0131 Say\u0131s\u0131  {0} pts  \u2192  {1}"
+  - key: statspanel_move_speed
+    value: "Hareket H\u0131z\u0131    {0} pts  \u2192  {1}"
+  - key: statspanel_max_health
+    value: "Maksimum Can    {0} pts  \u2192  {1}"
+  - key: statspanel_defense
+    value: "Savunma         {0} pts  \u2192  {1}%"
+  - key: statspanel_luck
+    value: "\u015Eans            {0} pts  \u2192  {1}x"
+  - key: statspanel_life_steal
+    value: "Can \xC7alma       {0} pts  \u2192  {1}%"
+  - key: statspanel_life_regen
+    value: "Can Yenileme    {0} pts  \u2192  {1} HP/s"
+  - key: statspanel_dodge
+    value: "Ka\xE7\u0131nma         {0} pts  \u2192  {1}%"
+  - key: statspanel_xp_gain
+    value: "XP Kazan\u0131m\u0131     {0} pts  \u2192  {1}x"
+  - key: statspanel_coin_gain
+    value: "Alt\u0131n Kazan\u0131m\u0131  {0} pts  \u2192  {1}x"
+  - key: statspanel_pickup_radius
+    value: "Toplama Menzili {0} pts  \u2192  {1}"
+  - key: statspanel_difficulty
+    value: "Zorluk          {0} pts  \u2192  {1}x"
+  - key: statspanel_knockback
+    value: "Geri \u0130tme       {0} pts  \u2192  {1}x"
+  - key: statspanel_crit_chance
+    value: "Kritik \u015Eans     {0} pts  \u2192  {1}%"
+  - key: boss_1
+    value: Patron I
+  - key: boss_2
+    value: Patron II
+  - key: boss_3
+    value: Patron III
+  - key: death_title
+    value: "\xD6LD\xDCN"
+  - key: hud_xp_label
+    value: XP
+  - key: restart
+    value: "Yeniden Ba\u015Flat"
+  - key: main_menu
+    value: "Ana Men\xFC"
+  - key: resume
+    value: Devam Et
+  - key: continue
+    value: Devam
+  - key: quit
+    value: "\xC7\u0131k\u0131\u015F"
+  - key: settings
+    value: Ayarlar
+  - key: play
+    value: Oyna
+  - key: choose_character
+    value: "Karakterini Se\xE7"
+  - key: knight
+    value: "\u015E\xF6valye"
+  - key: archer
+    value: "Ok\xE7u"
+  - key: mage
+    value: "B\xFCy\xFCc\xFC"
+  - key: vampire
+    value: Vampir
+  - key: back
+    value: Geri
+  - key: sell
+    value: Sat
+  - key: buy
+    value: "Sat\u0131n Al"
+  - key: pause_title
+    value: DURAKLATILDI
+  - key: pause
+    value: DURAKLATILDI
+  - key: settings_title
+    value: Ayarlar
+  - key: settings_audio
+    value: Ses
+  - key: settings_display
+    value: "G\xF6r\xFCnt\xFC"
+  - key: settings_master
+    value: Ana Ses
+  - key: settings_music
+    value: "M\xFCzik"
+  - key: settings_sfx
+    value: Efekt
+  - key: settings_ui
+    value: "Aray\xFCz"
+  - key: settings_fullscreen
+    value: Tam Ekran
+  - key: settings_vsync
+    value: VSync
+  - key: settings_resolution
+    value: "\xC7\xF6z\xFCn\xFCrl\xFCk"
+  - key: settings_language
+    value: Dil
+  - key: btn_take
+    value: Al
+  - key: btn_no_space
+    value: Yer Yok
+  - key: interact_press_e
+    value: '[E]''ye Bas'
+  - key: btn_restart
+    value: "Yeniden Ba\u015Flat"
+  - key: btn_main_menu
+    value: "Ana Men\xFC"
+  - key: btn_resume
+    value: Devam Et
+  - key: btn_continue
+    value: Devam
+  - key: btn_quit
+    value: "\xC7\u0131k\u0131\u015F"
+  - key: btn_settings
+    value: Ayarlar
+  - key: btn_play
+    value: Oyna
+  - key: btn_back
+    value: Geri
+  - key: btn_sell
+    value: Sat
+  - key: btn_buy
+    value: "Sat\u0131n Al"

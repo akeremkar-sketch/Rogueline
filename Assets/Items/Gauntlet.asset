@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c40d089c405cf74e805d0c249ec6e31, type: 3}
+  m_Name: Gauntlet
+  m_EditorClassIdentifier: 
+  itemName: Gauntlet
+  description: Defense +40
+  icon: {fileID: -1496767822, guid: 84bfa66d6b833e14f804fee887ff62b2, type: 3}
+  price: 16
+  modifiers:
+  - stat: 8
+    amount: 40

@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2ec8f321b63414782f6781ca6e3746, type: 3}
+  m_Name: Spanish
+  m_EditorClassIdentifier: 
+  languageName: "Espa\xF1ol"
+  font: {fileID: 0}
+  fontSizeMultiplier: 1
+  entries:
+  - key: status_ready
+    value: LISTO
+  - key: status_active
+    value: ACTIVO {0}s
+  - key: status_no_blood
+    value: SIN SANGRE
+  - key: status_dodge
+    value: "\xA1ESQUIVADO!"
+  - key: status_slowed
+    value: "\xA1RALENTIZADO!"
+  - key: ability_charge_rush
+    value: Carga Veloz
+  - key: ability_dash
+    value: Dash
+  - key: ability_blink
+    value: Parpadeo
+  - key: ability_bat_form
+    value: "Forma de Murci\xE9lago"
+  - key: stat_move_speed
+    value: Velocidad
+  - key: stat_max_health
+    value: "Vida M\xE1xima"
+  - key: stat_damage
+    value: "Da\xF1o"
+  - key: stat_attack_speed
+    value: Vel. de Ataque
+  - key: stat_attack_count
+    value: "N\xBA de Ataques"
+  - key: stat_pickup_radius
+    value: Radio de Recogida
+  - key: stat_xp_gain
+    value: Ganancia de XP
+  - key: stat_coin_gain
+    value: Ganancia de Monedas
+  - key: stat_defense
+    value: Defensa
+  - key: stat_luck
+    value: Suerte
+  - key: stat_life_steal
+    value: Robo de Vida
+  - key: stat_life_regen
+    value: Regen. de Vida
+  - key: stat_dodge
+    value: Esquiva
+  - key: stat_knockback
+    value: Retroceso
+  - key: stat_crit_chance
+    value: "Prob. Cr\xEDtica"
+  - key: stat_difficulty
+    value: Dificultad
+  - key: take
+    value: Tomar
+  - key: no_space
+    value: Sin Espacio
+  - key: press_e
+    value: Pulsa [E]
+  - key: shop_prompt
+    value: '[E] Tienda'
+  - key: shop_sell
+    value: 'Vender: {0} monedas'
+  - key: shop_price
+    value: '{0} monedas'
+  - key: shop_inventory_full
+    value: "\xA1Inventario lleno!"
+  - key: shop_not_enough_coins
+    value: "\xA1Monedas insuficientes!"
+  - key: shop_bought
+    value: "\xA1{0} comprado!"
+  - key: tooltip_sell
+    value: 'Vender: {0}'
+  - key: hud_level
+    value: Nv. {0}
+  - key: hud_xp_max
+    value: "M\xE1x"
+  - key: wave_active
+    value: OLA {0}
+  - key: wave_next
+    value: 'Siguiente Ola: {0}s'
+  - key: upgrade_level_up
+    value: "\xA1NIVEL {0}!"
+  - key: abilitybar_keybind
+    value: '[SPACE]  {0}'
+  - key: death_score
+    value: 'PUNTOS: {0}'
+  - key: death_distance
+    value: 'Distancia:      {0}m  (+{1})'
+  - key: death_kills
+    value: 'Bajas:          {0}  (+{1})'
+  - key: death_damage_dealt
+    value: "Da\xF1o Infligido: {0}  (+{1})"
+  - key: death_level
+    value: 'Nivel:          {0}  (+{1})'
+  - key: death_coins
+    value: 'Monedas:        {0}  (+{1})'
+  - key: death_damage_taken
+    value: "Da\xF1o Recibido:  {0}  (-{1})"
+  - key: statspanel_damage
+    value: "Da\xF1o            {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_speed
+    value: "Vel. Ataque     {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_count
+    value: "N\xBA Ataques      {0} pts  \u2192  {1}"
+  - key: statspanel_move_speed
+    value: "Velocidad       {0} pts  \u2192  {1}"
+  - key: statspanel_max_health
+    value: "Vida M\xE1xima     {0} pts  \u2192  {1}"
+  - key: statspanel_defense
+    value: "Defensa         {0} pts  \u2192  {1}%"
+  - key: statspanel_luck
+    value: "Suerte          {0} pts  \u2192  {1}x"
+  - key: statspanel_life_steal
+    value: "Robo de Vida    {0} pts  \u2192  {1}%"
+  - key: statspanel_life_regen
+    value: "Regen. Vida     {0} pts  \u2192  {1} HP/s"
+  - key: statspanel_dodge
+    value: "Esquiva         {0} pts  \u2192  {1}%"
+  - key: statspanel_xp_gain
+    value: "Ganancia XP     {0} pts  \u2192  {1}x"
+  - key: statspanel_coin_gain
+    value: "Ganancia Moneda {0} pts  \u2192  {1}x"
+  - key: statspanel_pickup_radius
+    value: "Radio Recogida  {0} pts  \u2192  {1}"
+  - key: statspanel_difficulty
+    value: "Dificultad      {0} pts  \u2192  {1}x"
+  - key: statspanel_knockback
+    value: "Retroceso       {0} pts  \u2192  {1}x"
+  - key: statspanel_crit_chance
+    value: "Prob. Cr\xEDtica   {0} pts  \u2192  {1}%"
+  - key: boss_1
+    value: Jefe I
+  - key: boss_2
+    value: Jefe II
+  - key: boss_3
+    value: Jefe III
+  - key: death_title
+    value: HAS MUERTO
+  - key: hud_xp_label
+    value: XP
+  - key: restart
+    value: Reiniciar
+  - key: main_menu
+    value: "Men\xFA Principal"
+  - key: resume
+    value: Reanudar
+  - key: continue
+    value: Continuar
+  - key: quit
+    value: Salir
+  - key: settings
+    value: Ajustes
+  - key: play
+    value: Jugar
+  - key: choose_character
+    value: Elige tu Personaje
+  - key: knight
+    value: Caballero
+  - key: archer
+    value: Arquero
+  - key: mage
+    value: Mago
+  - key: vampire
+    value: Vampiro
+  - key: back
+    value: "Atr\xE1s"
+  - key: sell
+    value: Vender
+  - key: buy
+    value: Comprar
+  - key: pause_title
+    value: PAUSADO
+  - key: pause
+    value: PAUSADO
+  - key: settings_title
+    value: Ajustes
+  - key: settings_audio
+    value: Audio
+  - key: settings_display
+    value: Pantalla
+  - key: settings_master
+    value: Master
+  - key: settings_music
+    value: "M\xFAsica"
+  - key: settings_sfx
+    value: Efectos
+  - key: settings_ui
+    value: Interfaz
+  - key: settings_fullscreen
+    value: Pantalla Completa
+  - key: settings_vsync
+    value: VSync
+  - key: settings_resolution
+    value: "Resoluci\xF3n"
+  - key: settings_language
+    value: Idioma
+  - key: btn_take
+    value: Tomar
+  - key: btn_no_space
+    value: Sin Espacio
+  - key: interact_press_e
+    value: Pulsa [E]
+  - key: btn_restart
+    value: Reiniciar
+  - key: btn_main_menu
+    value: "Men\xFA Principal"
+  - key: btn_resume
+    value: Reanudar
+  - key: btn_continue
+    value: Continuar
+  - key: btn_quit
+    value: Salir
+  - key: btn_settings
+    value: Ajustes
+  - key: btn_play
+    value: Jugar
+  - key: btn_back
+    value: "Atr\xE1s"
+  - key: btn_sell
+    value: Vender
+  - key: btn_buy
+    value: Comprar

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfcefc120a46a1488e6be6be2346d0a, type: 3}
+  m_Name: KnightData
+  m_EditorClassIdentifier: 
+  type: 0
+  displayName: Knight
+  description: 
+  avatar: {fileID: 21300000, guid: 3bc899bab7f22044fbde8baa9d8ed69a, type: 3}
+  weaponType: 0
+  animatorController: {fileID: 9100000, guid: a1b2c3d4e5f60001000000000000013c, type: 2}
+  startingBonuses:
+  - stat: 1
+    points: 50
+  - stat: 8
+    points: 60
+  - stat: 0
+    points: 10
+  - stat: 2
+    points: 20
+  - stat: 14
+    points: -30

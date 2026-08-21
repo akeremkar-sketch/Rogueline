@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2ec8f321b63414782f6781ca6e3746, type: 3}
+  m_Name: French
+  m_EditorClassIdentifier: 
+  languageName: "Fran\xE7ais"
+  font: {fileID: 0}
+  fontSizeMultiplier: 1
+  entries:
+  - key: status_ready
+    value: "PR\xCAT"
+  - key: status_active
+    value: ACTIF {0}s
+  - key: status_no_blood
+    value: SANS SANG
+  - key: status_dodge
+    value: "ESQUIV\xC9!"
+  - key: status_slowed
+    value: RALENTI!
+  - key: ability_charge_rush
+    value: Charge Rapide
+  - key: ability_dash
+    value: Dash
+  - key: ability_blink
+    value: "T\xE9l\xE9portation"
+  - key: ability_bat_form
+    value: Forme Chauve-Souris
+  - key: stat_move_speed
+    value: Vitesse
+  - key: stat_max_health
+    value: Vie Maximale
+  - key: stat_damage
+    value: "D\xE9g\xE2ts"
+  - key: stat_attack_speed
+    value: Vit. d'Attaque
+  - key: stat_attack_count
+    value: Nbre d'Attaques
+  - key: stat_pickup_radius
+    value: Rayon de Collecte
+  - key: stat_xp_gain
+    value: Gain d'XP
+  - key: stat_coin_gain
+    value: "Gain de Pi\xE8ces"
+  - key: stat_defense
+    value: "D\xE9fense"
+  - key: stat_luck
+    value: Chance
+  - key: stat_life_steal
+    value: Vol de Vie
+  - key: stat_life_regen
+    value: "R\xE9g\xE9n. de Vie"
+  - key: stat_dodge
+    value: Esquive
+  - key: stat_knockback
+    value: Recul
+  - key: stat_crit_chance
+    value: Chance Critique
+  - key: stat_difficulty
+    value: "Difficult\xE9"
+  - key: take
+    value: Prendre
+  - key: no_space
+    value: Pas de Place
+  - key: press_e
+    value: Appuyer [E]
+  - key: shop_prompt
+    value: '[E] Boutique'
+  - key: shop_sell
+    value: "Vendre: {0} pi\xE8ces"
+  - key: shop_price
+    value: "{0} pi\xE8ces"
+  - key: shop_inventory_full
+    value: Inventaire plein!
+  - key: shop_not_enough_coins
+    value: "Pi\xE8ces insuffisantes!"
+  - key: shop_bought
+    value: "{0} achet\xE9!"
+  - key: tooltip_sell
+    value: 'Vendre: {0}'
+  - key: hud_level
+    value: Nv. {0}
+  - key: hud_xp_max
+    value: Max
+  - key: wave_active
+    value: VAGUE {0}
+  - key: wave_next
+    value: 'Prochaine Vague: {0}s'
+  - key: upgrade_level_up
+    value: NIVEAU {0}!
+  - key: abilitybar_keybind
+    value: '[SPACE]  {0}'
+  - key: death_score
+    value: 'SCORE: {0}'
+  - key: death_distance
+    value: 'Distance:      {0}m  (+{1})'
+  - key: death_kills
+    value: "\xC9liminations:  {0}  (+{1})"
+  - key: death_damage_dealt
+    value: "D\xE9g\xE2ts Inflig: {0}  (+{1})"
+  - key: death_level
+    value: 'Niveau:        {0}  (+{1})'
+  - key: death_coins
+    value: "Pi\xE8ces:        {0}  (+{1})"
+  - key: death_damage_taken
+    value: "D\xE9g\xE2ts Re\xE7us:  {0}  (-{1})"
+  - key: statspanel_damage
+    value: "D\xE9g\xE2ts          {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_speed
+    value: "Vit. Attaque    {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_count
+    value: "Nbre Attaques   {0} pts  \u2192  {1}"
+  - key: statspanel_move_speed
+    value: "Vitesse         {0} pts  \u2192  {1}"
+  - key: statspanel_max_health
+    value: "Vie Maximale    {0} pts  \u2192  {1}"
+  - key: statspanel_defense
+    value: "D\xE9fense         {0} pts  \u2192  {1}%"
+  - key: statspanel_luck
+    value: "Chance          {0} pts  \u2192  {1}x"
+  - key: statspanel_life_steal
+    value: "Vol de Vie      {0} pts  \u2192  {1}%"
+  - key: statspanel_life_regen
+    value: "R\xE9g\xE9n. Vie      {0} pts  \u2192  {1} HP/s"
+  - key: statspanel_dodge
+    value: "Esquive         {0} pts  \u2192  {1}%"
+  - key: statspanel_xp_gain
+    value: "Gain XP         {0} pts  \u2192  {1}x"
+  - key: statspanel_coin_gain
+    value: "Gain Pi\xE8ces     {0} pts  \u2192  {1}x"
+  - key: statspanel_pickup_radius
+    value: "Rayon Collecte  {0} pts  \u2192  {1}"
+  - key: statspanel_difficulty
+    value: "Difficult\xE9      {0} pts  \u2192  {1}x"
+  - key: statspanel_knockback
+    value: "Recul           {0} pts  \u2192  {1}x"
+  - key: statspanel_crit_chance
+    value: "Chance Critique {0} pts  \u2192  {1}%"
+  - key: boss_1
+    value: Boss I
+  - key: boss_2
+    value: Boss II
+  - key: boss_3
+    value: Boss III
+  - key: death_title
+    value: "VOUS \xCATES MORT"
+  - key: hud_xp_label
+    value: XP
+  - key: restart
+    value: Recommencer
+  - key: main_menu
+    value: Menu Principal
+  - key: resume
+    value: Reprendre
+  - key: continue
+    value: Continuer
+  - key: quit
+    value: Quitter
+  - key: settings
+    value: "Param\xE8tres"
+  - key: play
+    value: Jouer
+  - key: choose_character
+    value: Choisissez votre Personnage
+  - key: knight
+    value: Chevalier
+  - key: archer
+    value: Archer
+  - key: mage
+    value: Mage
+  - key: vampire
+    value: Vampire
+  - key: back
+    value: Retour
+  - key: sell
+    value: Vendre
+  - key: buy
+    value: Acheter
+  - key: pause_title
+    value: PAUSE
+  - key: pause
+    value: PAUSE
+  - key: settings_title
+    value: "Param\xE8tres"
+  - key: settings_audio
+    value: Audio
+  - key: settings_display
+    value: Affichage
+  - key: settings_master
+    value: Master
+  - key: settings_music
+    value: Musique
+  - key: settings_sfx
+    value: Effets
+  - key: settings_ui
+    value: Interface
+  - key: settings_fullscreen
+    value: "Plein \xC9cran"
+  - key: settings_vsync
+    value: VSync
+  - key: settings_resolution
+    value: "R\xE9solution"
+  - key: settings_language
+    value: Langue
+  - key: btn_take
+    value: Prendre
+  - key: btn_no_space
+    value: Pas de Place
+  - key: interact_press_e
+    value: Appuyer [E]
+  - key: btn_restart
+    value: Recommencer
+  - key: btn_main_menu
+    value: Menu Principal
+  - key: btn_resume
+    value: Reprendre
+  - key: btn_continue
+    value: Continuer
+  - key: btn_quit
+    value: Quitter
+  - key: btn_settings
+    value: "Param\xE8tres"
+  - key: btn_play
+    value: Jouer
+  - key: btn_back
+    value: Retour
+  - key: btn_sell
+    value: Vendre
+  - key: btn_buy
+    value: Acheter

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,14 +7,20 @@ public class LevelSystem : MonoBehaviour
     public static LevelSystem Instance { get; private set; }
 
     [Header("Level Settings")]
-    [SerializeField] private int baseXPRequired = 100;
+    [SerializeField] private int   baseXPRequired      = 100;
     [SerializeField] private float xpMultiplierPerLevel = 1.2f;
+    [SerializeField] private int   maxLevel             = 30;
+
+    [Header("Sounds")]
+    [SerializeField] private AudioClip levelUpSound;
+
+    private AudioSource _audioSource;
 
     public int CurrentLevel { get; private set; } = 1;
     public int CurrentXP { get; private set; } = 0;
     public int XPRequired { get; private set; }
 
-    // Level atlandığında diğer sistemler dinleyebilir
+    // Other systems can listen for when a level is gained
     public UnityEvent OnLevelUp;
 
     private void Awake()
@@ -22,28 +29,50 @@ public class LevelSystem : MonoBehaviour
         else Destroy(gameObject);
 
         XPRequired = baseXPRequired;
+
+        _audioSource                    = gameObject.AddComponent<AudioSource>();
+        _audioSource.playOnAwake        = false;
+        _audioSource.spatialBlend       = 0f;
+        _audioSource.ignoreListenerPause = true;
     }
+
+    public bool IsMaxLevel => CurrentLevel >= maxLevel;
 
     public void AddXP(int amount)
     {
-        // XP gain bonusunu uygula
-        int bonusXP = Mathf.RoundToInt(amount * PlayerStats.Instance.XPGain);
+        if (IsMaxLevel) return;
+
+        float xpGain = PlayerStats.Instance != null ? PlayerStats.Instance.XPGain : 1f;
+        int bonusXP = Mathf.RoundToInt(amount * xpGain);
         CurrentXP += bonusXP;
 
-        if (CurrentXP >= XPRequired)
+        while (CurrentXP >= XPRequired && !IsMaxLevel)
             LevelUp();
     }
+
+    private readonly Queue<int> pendingLevels = new Queue<int>();
 
     private void LevelUp()
     {
         CurrentXP -= XPRequired;
         CurrentLevel++;
 
-        // Her level için gereken XP artar
         XPRequired = Mathf.RoundToInt(baseXPRequired * Mathf.Pow(xpMultiplierPerLevel, CurrentLevel - 1));
 
-        Debug.Log($"Level Up! Yeni level: {CurrentLevel}");
+        if (levelUpSound != null) _audioSource.PlayOneShot(levelUpSound);
+        GameManager.Instance?.RegisterLevelUp();
         OnLevelUp?.Invoke();
+
+        pendingLevels.Enqueue(CurrentLevel);
+        if (pendingLevels.Count == 1)
+            UpgradeUI.Instance?.Show(CurrentLevel);
+    }
+
+    public void OnUpgradeChosen()
+    {
+        pendingLevels.Dequeue();
+        if (pendingLevels.Count > 0)
+            UpgradeUI.Instance?.Show(pendingLevels.Peek());
     }
 
     public float GetXPPercent() => (float)CurrentXP / XPRequired;

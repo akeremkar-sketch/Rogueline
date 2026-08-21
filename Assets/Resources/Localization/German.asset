@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2ec8f321b63414782f6781ca6e3746, type: 3}
+  m_Name: German
+  m_EditorClassIdentifier: 
+  languageName: Deutsch
+  font: {fileID: 0}
+  fontSizeMultiplier: 1
+  entries:
+  - key: status_ready
+    value: BEREIT
+  - key: status_active
+    value: AKTIV {0}s
+  - key: status_no_blood
+    value: KEIN BLUT
+  - key: status_dodge
+    value: AUSGEWICHEN!
+  - key: status_slowed
+    value: VERLANGSAMT!
+  - key: ability_charge_rush
+    value: Sturmangriff
+  - key: ability_dash
+    value: Dash
+  - key: ability_blink
+    value: Blinken
+  - key: ability_bat_form
+    value: Fledermausform
+  - key: stat_move_speed
+    value: Bewegungsgeschw.
+  - key: stat_max_health
+    value: Max. Leben
+  - key: stat_damage
+    value: Schaden
+  - key: stat_attack_speed
+    value: Angriffsgeschw.
+  - key: stat_attack_count
+    value: Angriffszahl
+  - key: stat_pickup_radius
+    value: Aufnahmeradius
+  - key: stat_xp_gain
+    value: XP-Gewinn
+  - key: stat_coin_gain
+    value: "M\xFCnz-Gewinn"
+  - key: stat_defense
+    value: Verteidigung
+  - key: stat_luck
+    value: "Gl\xFCck"
+  - key: stat_life_steal
+    value: Lebensraub
+  - key: stat_life_regen
+    value: Lebensregen.
+  - key: stat_dodge
+    value: Ausweichen
+  - key: stat_knockback
+    value: "R\xFCcksto\xDF"
+  - key: stat_crit_chance
+    value: Krit. Chance
+  - key: stat_difficulty
+    value: Schwierigkeit
+  - key: take
+    value: Nehmen
+  - key: no_space
+    value: Kein Platz
+  - key: press_e
+    value: "[E] dr\xFCcken"
+  - key: shop_prompt
+    value: '[E] Laden'
+  - key: shop_sell
+    value: "Verkaufen: {0} M\xFCnzen"
+  - key: shop_price
+    value: "{0} M\xFCnzen"
+  - key: shop_inventory_full
+    value: Inventar voll!
+  - key: shop_not_enough_coins
+    value: "Zu wenig M\xFCnzen!"
+  - key: shop_bought
+    value: '{0} gekauft!'
+  - key: tooltip_sell
+    value: 'Verkaufen: {0}'
+  - key: hud_level
+    value: Lv. {0}
+  - key: hud_xp_max
+    value: Max
+  - key: wave_active
+    value: WELLE {0}
+  - key: wave_next
+    value: "N\xE4chste Welle: {0}s"
+  - key: upgrade_level_up
+    value: LEVEL {0}!
+  - key: abilitybar_keybind
+    value: '[SPACE]  {0}'
+  - key: death_score
+    value: 'PUNKTE: {0}'
+  - key: death_distance
+    value: 'Distanz:        {0}m  (+{1})'
+  - key: death_kills
+    value: "Absch\xFCsse:      {0}  (+{1})"
+  - key: death_damage_dealt
+    value: 'Schaden (ausg): {0}  (+{1})'
+  - key: death_level
+    value: 'Level:          {0}  (+{1})'
+  - key: death_coins
+    value: "M\xFCnzen:         {0}  (+{1})"
+  - key: death_damage_taken
+    value: 'Schaden (erh):  {0}  (-{1})'
+  - key: statspanel_damage
+    value: "Schaden         {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_speed
+    value: "Angriffsgeschw. {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_count
+    value: "Angriffszahl    {0} pts  \u2192  {1}"
+  - key: statspanel_move_speed
+    value: "Bewegungsgeschw.{0} pts  \u2192  {1}"
+  - key: statspanel_max_health
+    value: "Max. Leben      {0} pts  \u2192  {1}"
+  - key: statspanel_defense
+    value: "Verteidigung    {0} pts  \u2192  {1}%"
+  - key: statspanel_luck
+    value: "Gl\xFCck           {0} pts  \u2192  {1}x"
+  - key: statspanel_life_steal
+    value: "Lebensraub      {0} pts  \u2192  {1}%"
+  - key: statspanel_life_regen
+    value: "Lebensregen.    {0} pts  \u2192  {1} HP/s"
+  - key: statspanel_dodge
+    value: "Ausweichen      {0} pts  \u2192  {1}%"
+  - key: statspanel_xp_gain
+    value: "XP-Gewinn       {0} pts  \u2192  {1}x"
+  - key: statspanel_coin_gain
+    value: "M\xFCnz-Gewinn     {0} pts  \u2192  {1}x"
+  - key: statspanel_pickup_radius
+    value: "Aufnahmeradius  {0} pts  \u2192  {1}"
+  - key: statspanel_difficulty
+    value: "Schwierigkeit   {0} pts  \u2192  {1}x"
+  - key: statspanel_knockback
+    value: "R\xFCcksto\xDF        {0} pts  \u2192  {1}x"
+  - key: statspanel_crit_chance
+    value: "Krit. Chance    {0} pts  \u2192  {1}%"
+  - key: boss_1
+    value: Boss I
+  - key: boss_2
+    value: Boss II
+  - key: boss_3
+    value: Boss III
+  - key: death_title
+    value: DU BIST TOT
+  - key: hud_xp_label
+    value: XP
+  - key: restart
+    value: Neustart
+  - key: main_menu
+    value: "Hauptmen\xFC"
+  - key: resume
+    value: Fortsetzen
+  - key: continue
+    value: Weiter
+  - key: quit
+    value: Beenden
+  - key: settings
+    value: Einstellungen
+  - key: play
+    value: Spielen
+  - key: choose_character
+    value: "W\xE4hle deinen Charakter"
+  - key: knight
+    value: Ritter
+  - key: archer
+    value: "Bogensch\xFCtze"
+  - key: mage
+    value: Magier
+  - key: vampire
+    value: Vampir
+  - key: back
+    value: "Zur\xFCck"
+  - key: sell
+    value: Verkaufen
+  - key: buy
+    value: Kaufen
+  - key: pause_title
+    value: PAUSIERT
+  - key: pause
+    value: PAUSIERT
+  - key: settings_title
+    value: Einstellungen
+  - key: settings_audio
+    value: Audio
+  - key: settings_display
+    value: Anzeige
+  - key: settings_master
+    value: Master
+  - key: settings_music
+    value: Musik
+  - key: settings_sfx
+    value: Effekte
+  - key: settings_ui
+    value: Interface
+  - key: settings_fullscreen
+    value: Vollbild
+  - key: settings_vsync
+    value: VSync
+  - key: settings_resolution
+    value: "Aufl\xF6sung"
+  - key: settings_language
+    value: Sprache
+  - key: btn_take
+    value: Nehmen
+  - key: btn_no_space
+    value: Kein Platz
+  - key: interact_press_e
+    value: "[E] dr\xFCcken"
+  - key: btn_restart
+    value: Neustart
+  - key: btn_main_menu
+    value: "Hauptmen\xFC"
+  - key: btn_resume
+    value: Fortsetzen
+  - key: btn_continue
+    value: Weiter
+  - key: btn_quit
+    value: Beenden
+  - key: btn_settings
+    value: Einstellungen
+  - key: btn_play
+    value: Spielen
+  - key: btn_back
+    value: "Zur\xFCck"
+  - key: btn_sell
+    value: Verkaufen
+  - key: btn_buy
+    value: Kaufen

@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2ec8f321b63414782f6781ca6e3746, type: 3}
+  m_Name: English
+  m_EditorClassIdentifier: 
+  languageName: English
+  font: {fileID: 0}
+  fontSizeMultiplier: 1
+  entries:
+  - key: status_ready
+    value: READY
+  - key: status_active
+    value: ACTIVE {0}s
+  - key: status_no_blood
+    value: NO BLOOD
+  - key: status_dodge
+    value: DODGE!
+  - key: status_slowed
+    value: SLOWED!
+  - key: ability_charge_rush
+    value: Charge Rush
+  - key: ability_dash
+    value: Dash
+  - key: ability_blink
+    value: Blink
+  - key: ability_bat_form
+    value: Bat Form
+  - key: stat_move_speed
+    value: Move Speed
+  - key: stat_max_health
+    value: Max Health
+  - key: stat_damage
+    value: Damage
+  - key: stat_attack_speed
+    value: Attack Speed
+  - key: stat_attack_count
+    value: Attack Count
+  - key: stat_pickup_radius
+    value: Pickup Radius
+  - key: stat_xp_gain
+    value: XP Gain
+  - key: stat_coin_gain
+    value: Coin Gain
+  - key: stat_defense
+    value: Defense
+  - key: stat_luck
+    value: Luck
+  - key: stat_life_steal
+    value: Life Steal
+  - key: stat_life_regen
+    value: Life Regen
+  - key: stat_dodge
+    value: Dodge
+  - key: stat_knockback
+    value: Knockback
+  - key: stat_crit_chance
+    value: Crit Chance
+  - key: stat_difficulty
+    value: Difficulty
+  - key: take
+    value: Take
+  - key: no_space
+    value: No Space
+  - key: press_e
+    value: Press [E]
+  - key: shop_prompt
+    value: '[E] Shop'
+  - key: shop_sell
+    value: 'Sell: {0} coins'
+  - key: shop_price
+    value: '{0} coins'
+  - key: shop_inventory_full
+    value: Inventory full!
+  - key: shop_not_enough_coins
+    value: Not enough coins!
+  - key: shop_bought
+    value: Bought {0}!
+  - key: tooltip_sell
+    value: 'Sell: {0}'
+  - key: hud_level
+    value: Lv. {0}
+  - key: hud_xp_max
+    value: Max
+  - key: wave_active
+    value: WAVE {0}
+  - key: wave_next
+    value: 'Next Wave: {0}s'
+  - key: upgrade_level_up
+    value: LEVEL {0}!
+  - key: abilitybar_keybind
+    value: '[SPACE]  {0}'
+  - key: death_score
+    value: 'SCORE: {0}'
+  - key: death_distance
+    value: 'Distance:      {0}m  (+{1})'
+  - key: death_kills
+    value: 'Kills:         {0}  (+{1})'
+  - key: death_damage_dealt
+    value: 'Damage Dealt:  {0}  (+{1})'
+  - key: death_level
+    value: 'Level:         {0}  (+{1})'
+  - key: death_coins
+    value: 'Coins:         {0}  (+{1})'
+  - key: death_damage_taken
+    value: 'Damage Taken:  {0}  (-{1})'
+  - key: statspanel_damage
+    value: "Damage          {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_speed
+    value: "Attack Speed    {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_count
+    value: "Attack Count    {0} pts  \u2192  {1}"
+  - key: statspanel_move_speed
+    value: "Move Speed      {0} pts  \u2192  {1}"
+  - key: statspanel_max_health
+    value: "Max Health      {0} pts  \u2192  {1}"
+  - key: statspanel_defense
+    value: "Defense         {0} pts  \u2192  {1}%"
+  - key: statspanel_luck
+    value: "Luck            {0} pts  \u2192  {1}x"
+  - key: statspanel_life_steal
+    value: "Life Steal      {0} pts  \u2192  {1}%"
+  - key: statspanel_life_regen
+    value: "Life Regen      {0} pts  \u2192  {1} HP/s"
+  - key: statspanel_dodge
+    value: "Dodge           {0} pts  \u2192  {1}%"
+  - key: statspanel_xp_gain
+    value: "XP Gain         {0} pts  \u2192  {1}x"
+  - key: statspanel_coin_gain
+    value: "Coin Gain       {0} pts  \u2192  {1}x"
+  - key: statspanel_pickup_radius
+    value: "Pickup Radius   {0} pts  \u2192  {1}"
+  - key: statspanel_difficulty
+    value: "Difficulty      {0} pts  \u2192  {1}x"
+  - key: statspanel_knockback
+    value: "Knockback       {0} pts  \u2192  {1}x"
+  - key: statspanel_crit_chance
+    value: "Crit Chance     {0} pts  \u2192  {1}%"
+  - key: boss_1
+    value: Boss I
+  - key: boss_2
+    value: Boss II
+  - key: boss_3
+    value: Boss III
+  - key: death_title
+    value: YOU DIED
+  - key: hud_xp_label
+    value: XP
+  - key: restart
+    value: Restart
+  - key: main_menu
+    value: Main Menu
+  - key: resume
+    value: Resume
+  - key: continue
+    value: Continue
+  - key: quit
+    value: Quit
+  - key: settings
+    value: Settings
+  - key: play
+    value: Play
+  - key: choose_character
+    value: Choose Your Character
+  - key: knight
+    value: Knight
+  - key: archer
+    value: Archer
+  - key: mage
+    value: Mage
+  - key: vampire
+    value: Vampire
+  - key: back
+    value: Back
+  - key: sell
+    value: Sell
+  - key: buy
+    value: Buy
+  - key: pause_title
+    value: PAUSED
+  - key: pause
+    value: PAUSED
+  - key: settings_title
+    value: Settings
+  - key: settings_audio
+    value: Audio
+  - key: settings_display
+    value: Display
+  - key: settings_master
+    value: Master
+  - key: settings_music
+    value: Music
+  - key: settings_sfx
+    value: SFX
+  - key: settings_ui
+    value: UI
+  - key: settings_fullscreen
+    value: Fullscreen
+  - key: settings_vsync
+    value: VSync
+  - key: settings_resolution
+    value: Resolution
+  - key: settings_language
+    value: Language
+  - key: btn_take
+    value: Take
+  - key: btn_no_space
+    value: No Space
+  - key: interact_press_e
+    value: Press [E]
+  - key: btn_restart
+    value: Restart
+  - key: btn_main_menu
+    value: Main Menu
+  - key: btn_resume
+    value: Resume
+  - key: btn_continue
+    value: Continue
+  - key: btn_quit
+    value: Quit
+  - key: btn_settings
+    value: Settings
+  - key: btn_play
+    value: Play
+  - key: btn_back
+    value: Back
+  - key: btn_sell
+    value: Sell
+  - key: btn_buy
+    value: Buy

@@ -18,4 +18,12 @@ public class CoinManager : MonoBehaviour
     }
 
     public int GetCoins() => currentCoins;
+
+    // Returns true if successful, false if not enough coins
+    public bool SpendCoins(int amount)
+    {
+        if (currentCoins < amount) return false;
+        currentCoins -= amount;
+        return true;
+    }
 }

@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2ec8f321b63414782f6781ca6e3746, type: 3}
+  m_Name: Japanese
+  m_EditorClassIdentifier: 
+  languageName: "\u65E5\u672C\u8A9E"
+  font: {fileID: 0}
+  fontSizeMultiplier: 1
+  entries:
+  - key: status_ready
+    value: "\u6E96\u5099\u5B8C\u4E86"
+  - key: status_active
+    value: "\u767A\u52D5\u4E2D {0}s"
+  - key: status_no_blood
+    value: "\u8840\u306A\u3057"
+  - key: status_dodge
+    value: "\u56DE\u907F\uFF01"
+  - key: status_slowed
+    value: "\u920D\u5316\uFF01"
+  - key: ability_charge_rush
+    value: "\u30C1\u30E3\u30FC\u30B8\u30E9\u30C3\u30B7\u30E5"
+  - key: ability_dash
+    value: "\u30C0\u30C3\u30B7\u30E5"
+  - key: ability_blink
+    value: "\u77AC\u79FB"
+  - key: ability_bat_form
+    value: "\u30B3\u30A6\u30E2\u30EA\u5F62\u614B"
+  - key: stat_move_speed
+    value: "\u79FB\u52D5\u901F\u5EA6"
+  - key: stat_max_health
+    value: "\u6700\u5927HP"
+  - key: stat_damage
+    value: "\u653B\u6483\u529B"
+  - key: stat_attack_speed
+    value: "\u653B\u6483\u901F\u5EA6"
+  - key: stat_attack_count
+    value: "\u653B\u6483\u56DE\u6570"
+  - key: stat_pickup_radius
+    value: "\u53CE\u96C6\u7BC4\u56F2"
+  - key: stat_xp_gain
+    value: "XP\u7372\u5F97"
+  - key: stat_coin_gain
+    value: "\u30B3\u30A4\u30F3\u7372\u5F97"
+  - key: stat_defense
+    value: "\u9632\u5FA1"
+  - key: stat_luck
+    value: "\u5E78\u904B"
+  - key: stat_life_steal
+    value: "\u5438\u8840"
+  - key: stat_life_regen
+    value: "HP\u56DE\u5FA9"
+  - key: stat_dodge
+    value: "\u56DE\u907F"
+  - key: stat_knockback
+    value: "\u30CE\u30C3\u30AF\u30D0\u30C3\u30AF"
+  - key: stat_crit_chance
+    value: "\u30AF\u30EA\u30C3\u30C8\u7387"
+  - key: stat_difficulty
+    value: "\u96E3\u6613\u5EA6"
+  - key: take
+    value: "\u53D6\u5F97"
+  - key: no_space
+    value: "\u7A7A\u304D\u306A\u3057"
+  - key: press_e
+    value: "[E]\u3092\u62BC\u3059"
+  - key: shop_prompt
+    value: "[E] \u30B7\u30E7\u30C3\u30D7"
+  - key: shop_sell
+    value: "\u58F2\u308B: {0} \u30B3\u30A4\u30F3"
+  - key: shop_price
+    value: "{0} \u30B3\u30A4\u30F3"
+  - key: shop_inventory_full
+    value: "\u30A4\u30F3\u30D9\u30F3\u30C8\u30EA\u6E80\u676F\uFF01"
+  - key: shop_not_enough_coins
+    value: "\u30B3\u30A4\u30F3\u4E0D\u8DB3\uFF01"
+  - key: shop_bought
+    value: "{0}\u3092\u8CFC\u5165\uFF01"
+  - key: tooltip_sell
+    value: "\u58F2\u308B: {0}"
+  - key: hud_level
+    value: Lv.{0}
+  - key: hud_xp_max
+    value: "\u6700\u5927"
+  - key: wave_active
+    value: "\u30A6\u30A7\u30FC\u30D6 {0}"
+  - key: wave_next
+    value: "\u6B21\u306E\u30A6\u30A7\u30FC\u30D6: {0}s"
+  - key: upgrade_level_up
+    value: "\u30EC\u30D9\u30EB {0}\uFF01"
+  - key: abilitybar_keybind
+    value: '[SPACE]  {0}'
+  - key: death_score
+    value: "\u30B9\u30B3\u30A2: {0}"
+  - key: death_distance
+    value: "\u8DDD\u96E2:          {0}m  (+{1})"
+  - key: death_kills
+    value: "\u6483\u7834:          {0}  (+{1})"
+  - key: death_damage_dealt
+    value: "\u4E0E\u3048\u305F\u30C0\u30E1\u30FC\u30B8:{0}  (+{1})"
+  - key: death_level
+    value: "\u30EC\u30D9\u30EB:        {0}  (+{1})"
+  - key: death_coins
+    value: "\u30B3\u30A4\u30F3:        {0}  (+{1})"
+  - key: death_damage_taken
+    value: "\u53D7\u3051\u305F\u30C0\u30E1\u30FC\u30B8:{0}  (-{1})"
+  - key: statspanel_damage
+    value: "\u653B\u6483\u529B          {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_speed
+    value: "\u653B\u6483\u901F\u5EA6        {0} pts  \u2192  {1}x"
+  - key: statspanel_attack_count
+    value: "\u653B\u6483\u56DE\u6570        {0} pts  \u2192  {1}"
+  - key: statspanel_move_speed
+    value: "\u79FB\u52D5\u901F\u5EA6        {0} pts  \u2192  {1}"
+  - key: statspanel_max_health
+    value: "\u6700\u5927HP          {0} pts  \u2192  {1}"
+  - key: statspanel_defense
+    value: "\u9632\u5FA1            {0} pts  \u2192  {1}%"
+  - key: statspanel_luck
+    value: "\u5E78\u904B            {0} pts  \u2192  {1}x"
+  - key: statspanel_life_steal
+    value: "\u5438\u8840            {0} pts  \u2192  {1}%"
+  - key: statspanel_life_regen
+    value: "HP\u56DE\u5FA9          {0} pts  \u2192  {1} HP/s"
+  - key: statspanel_dodge
+    value: "\u56DE\u907F            {0} pts  \u2192  {1}%"
+  - key: statspanel_xp_gain
+    value: "XP\u7372\u5F97          {0} pts  \u2192  {1}x"
+  - key: statspanel_coin_gain
+    value: "\u30B3\u30A4\u30F3\u7372\u5F97      {0} pts  \u2192  {1}x"
+  - key: statspanel_pickup_radius
+    value: "\u53CE\u96C6\u7BC4\u56F2        {0} pts  \u2192  {1}"
+  - key: statspanel_difficulty
+    value: "\u96E3\u6613\u5EA6          {0} pts  \u2192  {1}x"
+  - key: statspanel_knockback
+    value: "\u30CE\u30C3\u30AF\u30D0\u30C3\u30AF    {0} pts  \u2192  {1}x"
+  - key: statspanel_crit_chance
+    value: "\u30AF\u30EA\u30C3\u30C8\u7387      {0} pts  \u2192  {1}%"
+  - key: boss_1
+    value: "\u30DC\u30B9 I"
+  - key: boss_2
+    value: "\u30DC\u30B9 II"
+  - key: boss_3
+    value: "\u30DC\u30B9 III"
+  - key: death_title
+    value: "\u6B7B\u4EA1"
+  - key: hud_xp_label
+    value: XP
+  - key: restart
+    value: "\u30EA\u30B9\u30BF\u30FC\u30C8"
+  - key: main_menu
+    value: "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC"
+  - key: resume
+    value: "\u518D\u958B"
+  - key: continue
+    value: "\u7D9A\u3051\u308B"
+  - key: quit
+    value: "\u7D42\u4E86"
+  - key: settings
+    value: "\u8A2D\u5B9A"
+  - key: play
+    value: "\u30D7\u30EC\u30A4"
+  - key: choose_character
+    value: "\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u3092\u9078\u629E"
+  - key: knight
+    value: "\u9A0E\u58EB"
+  - key: archer
+    value: "\u5F13\u4F7F\u3044"
+  - key: mage
+    value: "\u9B54\u6CD5\u4F7F\u3044"
+  - key: vampire
+    value: "\u30F4\u30A1\u30F3\u30D1\u30A4\u30A2"
+  - key: back
+    value: "\u623B\u308B"
+  - key: sell
+    value: "\u58F2\u308B"
+  - key: buy
+    value: "\u8CB7\u3046"
+  - key: pause_title
+    value: "\u4E00\u6642\u505C\u6B62"
+  - key: pause
+    value: "\u4E00\u6642\u505C\u6B62"
+  - key: settings_title
+    value: "\u8A2D\u5B9A"
+  - key: settings_audio
+    value: "\u97F3\u58F0"
+  - key: settings_display
+    value: "\u30C7\u30A3\u30B9\u30D7\u30EC\u30A4"
+  - key: settings_master
+    value: "\u30DE\u30B9\u30BF\u30FC"
+  - key: settings_music
+    value: "\u97F3\u697D"
+  - key: settings_sfx
+    value: "\u52B9\u679C\u97F3"
+  - key: settings_ui
+    value: UI
+  - key: settings_fullscreen
+    value: "\u30D5\u30EB\u30B9\u30AF\u30EA\u30FC\u30F3"
+  - key: settings_vsync
+    value: VSync
+  - key: settings_resolution
+    value: "\u89E3\u50CF\u5EA6"
+  - key: settings_language
+    value: "\u8A00\u8A9E"
+  - key: btn_take
+    value: "\u53D6\u5F97"
+  - key: btn_no_space
+    value: "\u7A7A\u304D\u306A\u3057"
+  - key: interact_press_e
+    value: "[E]\u3092\u62BC\u3059"
+  - key: btn_restart
+    value: "\u30EA\u30B9\u30BF\u30FC\u30C8"
+  - key: btn_main_menu
+    value: "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC"
+  - key: btn_resume
+    value: "\u518D\u958B"
+  - key: btn_continue
+    value: "\u7D9A\u3051\u308B"
+  - key: btn_quit
+    value: "\u7D42\u4E86"
+  - key: btn_settings
+    value: "\u8A2D\u5B9A"
+  - key: btn_play
+    value: "\u30D7\u30EC\u30A4"
+  - key: btn_back
+    value: "\u623B\u308B"
+  - key: btn_sell
+    value: "\u58F2\u308B"
+  - key: btn_buy
+    value: "\u8CB7\u3046"

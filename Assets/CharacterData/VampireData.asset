@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfcefc120a46a1488e6be6be2346d0a, type: 3}
+  m_Name: VampireData
+  m_EditorClassIdentifier: 
+  type: 3
+  displayName: Vampire
+  description: Transforms into a bat to hunt prey
+  avatar: {fileID: 21300000, guid: 29656cd65b704594a84400966798855e, type: 3}
+  weaponType: 3
+  animatorController: {fileID: 9100000, guid: a1b2c3d4e5f60001000000000000014c, type: 2}
+  startingBonuses:
+  - stat: 10
+    points: 70
+  - stat: 0
+    points: 20
+  - stat: 1
+    points: -30
